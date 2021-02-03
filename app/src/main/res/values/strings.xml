@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MVVM Kotlin Sample</string>
+    <string name="lupa_password">Lupa password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="belum_punya_akun_daftar_disini">Belum punya akun? daftar disini</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="nama">Nama</string>
+    <string name="confirm_password">Confirm password</string>
+</resources>
