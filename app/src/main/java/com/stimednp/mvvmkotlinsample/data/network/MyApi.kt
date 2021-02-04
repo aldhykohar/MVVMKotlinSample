@@ -13,12 +13,12 @@ interface MyApi {
     @FormUrlEncoded
     @POST("login")
     suspend fun userLogin(
-        @Field("email") email:String,
-        @Field("password") password:String
+        @Field("email") email: String,
+        @Field("password") password: String
     ): Response<AuthResponse>
 
-    companion object{
-        operator fun invoke():MyApi{
+    companion object {
+        operator fun invoke(): MyApi {
             return Retrofit.Builder()
                 .baseUrl("https://api.simplifiedcoding.in/course-apis/mvvm/")
                 .addConverterFactory(GsonConverterFactory.create())
