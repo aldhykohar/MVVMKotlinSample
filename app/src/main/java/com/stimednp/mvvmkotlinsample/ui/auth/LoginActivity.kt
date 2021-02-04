@@ -8,6 +8,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.stimednp.mvvmkotlinsample.R
+import com.stimednp.mvvmkotlinsample.data.db.entities.User
 import com.stimednp.mvvmkotlinsample.databinding.ActivityLoginBinding
 import com.stimednp.mvvmkotlinsample.ui.util.hide
 import com.stimednp.mvvmkotlinsample.ui.util.show
@@ -34,11 +35,9 @@ class LoginActivity : AppCompatActivity(), AuthListener {
         binding.progressBar.show()
     }
 
-    override fun onSuccess(loginResponse: LiveData<String>) {
-        loginResponse.observe(this, Observer {
-            binding.progressBar.hide()
-            toast(it)
-        })
+    override fun onSuccess(user: User) {
+        binding.progressBar.hide()
+        toast("${user.name} is Logged In")
     }
 
     override fun onFailure(message: String) {
