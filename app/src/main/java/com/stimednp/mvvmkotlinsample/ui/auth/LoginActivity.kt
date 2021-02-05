@@ -10,6 +10,7 @@ import com.stimednp.mvvmkotlinsample.R
 import com.stimednp.mvvmkotlinsample.data.db.AppDatabase
 import com.stimednp.mvvmkotlinsample.data.db.entities.User
 import com.stimednp.mvvmkotlinsample.data.network.MyApi
+import com.stimednp.mvvmkotlinsample.data.network.NetworkConnectionInterceptor
 import com.stimednp.mvvmkotlinsample.data.repository.UserRepository
 import com.stimednp.mvvmkotlinsample.databinding.ActivityLoginBinding
 import com.stimednp.mvvmkotlinsample.ui.home.HomeActivity
@@ -25,7 +26,8 @@ class LoginActivity : AppCompatActivity(), AuthListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val api = MyApi()
+        val networkConnectionInterceptor = NetworkConnectionInterceptor(this)
+        val api = MyApi(networkConnectionInterceptor)
         val db = AppDatabase(this)
         val repository = UserRepository(api, db)
         val factory = AuthViewModelFactory(repository)
