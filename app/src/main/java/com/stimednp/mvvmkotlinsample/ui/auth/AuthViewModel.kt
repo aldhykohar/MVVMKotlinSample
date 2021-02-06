@@ -3,9 +3,9 @@ package com.stimednp.mvvmkotlinsample.ui.auth
 import android.view.View
 import androidx.lifecycle.ViewModel
 import com.stimednp.mvvmkotlinsample.data.repository.UserRepository
-import com.stimednp.mvvmkotlinsample.ui.util.ApiException
-import com.stimednp.mvvmkotlinsample.ui.util.Coroutines
-import com.stimednp.mvvmkotlinsample.ui.util.NoInternetException
+import com.stimednp.mvvmkotlinsample.util.ApiException
+import com.stimednp.mvvmkotlinsample.util.Coroutines
+import com.stimednp.mvvmkotlinsample.util.NoInternetException
 
 class AuthViewModel(
     private val repository: UserRepository

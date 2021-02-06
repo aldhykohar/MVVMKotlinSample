@@ -2,7 +2,7 @@ package com.stimednp.mvvmkotlinsample.data.network
 
 import android.content.Context
 import android.net.ConnectivityManager
-import com.stimednp.mvvmkotlinsample.ui.util.NoInternetException
+import com.stimednp.mvvmkotlinsample.util.NoInternetException
 import okhttp3.Interceptor
 import okhttp3.Response
 

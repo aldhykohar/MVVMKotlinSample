@@ -1,4 +1,4 @@
-package com.stimednp.mvvmkotlinsample.ui.util
+package com.stimednp.mvvmkotlinsample.util
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

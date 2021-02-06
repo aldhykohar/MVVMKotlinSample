@@ -1,4 +1,4 @@
-package com.stimednp.mvvmkotlinsample.ui.util
+package com.stimednp.mvvmkotlinsample.util
 
 import android.content.Context
 import android.view.View

@@ -1,6 +1,6 @@
 package com.stimednp.mvvmkotlinsample.data.network
 
-import com.stimednp.mvvmkotlinsample.ui.util.ApiException
+import com.stimednp.mvvmkotlinsample.util.ApiException
 import org.json.JSONException
 import org.json.JSONObject
 import retrofit2.Response
