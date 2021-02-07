@@ -30,7 +30,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    dataBinding{
+    dataBinding {
         enabled true
     }
 }
@@ -70,4 +70,8 @@ dependencies {
     //Android Navigation Architecture
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.3'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.3'
+
+    implementation 'com.xwray:groupie:2.3.0'
+    implementation 'com.xwray:groupie-databinding:2.3.0'
+    implementation 'com.xwray:groupie-kotlin-android-extensions:2.3.0'
 }

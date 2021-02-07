@@ -4,6 +4,7 @@ import android.app.Application
 import com.stimednp.mvvmkotlinsample.data.db.AppDatabase
 import com.stimednp.mvvmkotlinsample.data.network.MyApi
 import com.stimednp.mvvmkotlinsample.data.network.NetworkConnectionInterceptor
+import com.stimednp.mvvmkotlinsample.data.preferences.PreferencesProvider
 import com.stimednp.mvvmkotlinsample.data.repository.QuotesRepository
 import com.stimednp.mvvmkotlinsample.data.repository.UserRepository
 import com.stimednp.mvvmkotlinsample.ui.auth.AuthViewModelFactory
@@ -25,8 +26,9 @@ class MVVMApplication : Application(), KodeinAware {
         bind() from singleton { NetworkConnectionInterceptor(instance()) }
         bind() from singleton { MyApi(instance()) }
         bind() from singleton { AppDatabase(instance()) }
+        bind() from singleton { PreferencesProvider(instance()) }
         bind() from singleton { UserRepository(instance(), instance()) }
-        bind() from singleton { QuotesRepository(instance(), instance()) }
+        bind() from singleton { QuotesRepository(instance(), instance(), instance()) }
         bind() from provider { AuthViewModelFactory(instance()) }
         bind() from provider { ProfileViewModelFactory(instance()) }
         bind() from provider { QuotesViewModelFactory(instance()) }
