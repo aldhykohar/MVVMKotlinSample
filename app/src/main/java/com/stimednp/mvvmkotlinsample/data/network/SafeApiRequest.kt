@@ -1,5 +1,6 @@
 package com.stimednp.mvvmkotlinsample.data.network
 
+import android.util.Log
 import com.stimednp.mvvmkotlinsample.util.ApiException
 import org.json.JSONException
 import org.json.JSONObject
@@ -9,6 +10,7 @@ abstract class SafeApiRequest {
 
     suspend fun <T : Any> apiRequest(call: suspend () -> Response<T>): T {
         val response = call.invoke()
+        Log.e("DATA", "apiRequest: $response")
         if (response.isSuccessful) {
             return response.body()!!
         } else {
